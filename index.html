@@ -1,0 +1,121 @@
+<!-- /c:/Users/dangk/OneDrive/Desktop/minecraft smart tv/index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Màn hình TV</title>
+  </head>
+  <body>
+    <div id="tv-screen">
+      <div id="clock"></div>
+
+      <div class="apps-grid">
+        <!-- Yt -->
+        <a
+          class="app-tile small-tile"
+          href="https://www.youtube.com"
+          rel="noopener noreferrer"
+        >
+          <div class="app-icon yt-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+              alt="YouTube"
+            />
+          </div>
+          <div class="app-label">YouTube</div>
+        </a>
+        <!-- VTVgo -->
+        <a
+          class="app-tile small-tile"
+          href="https://www.vtvgo.vn"
+          rel="noopener noreferrer"
+        >
+          <div class="app-icon yt-icon">
+            <img
+              src="https://web-cache-aws.vtvdigital.vn/assets/images/favicon.ico"
+              alt="VTVgo"
+            />
+          </div>
+          <div class="app-label">VTVgo</div>
+        </a>
+
+        <!-- Minecraft -->
+        <a
+          class="app-tile"
+          href="https://www.minecraft.net"
+          rel="noopener noreferrer"
+        >
+          <div class="app-icon">
+            <img
+              src="https://www.minecraft.net/content/dam/minecraftnet/franchise/logos/minecraft-creeper-face.jpg"
+              alt="Minecraft"
+            />
+          </div>
+          <div class="app-label">Minecraft</div>
+        </a>
+
+        <!-- Google -->
+        <a
+          class="app-tile"
+          href="https://www.google.com"
+          rel="noopener noreferrer"
+        >
+          <div class="app-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
+              alt="Google"
+            />
+          </div>
+          <div class="app-label">Google</div>
+        </a>
+
+        <!-- Netflix -->
+        <a
+          class="app-tile"
+          href="https://www.netflix.com"
+          rel="noopener noreferrer"
+        >
+          <div class="app-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5977/5977590.png"
+              alt="Netflix"
+            />
+          </div>
+          <div class="app-label">Netflix</div>
+        </a>
+        <!-- Cài đặt -->
+        <a class="app-tile" href="#" onclick="openSettings()">
+          <div class="app-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2099/2099058.png"
+              alt="Cài đặt"
+            />
+          </div>
+          <div class="app-label">Cài đặt</div>
+        </a>
+
+        <!--  -->
+      </div>
+    </div>
+
+    <script>
+      function openSettings() {
+        // placeholder: replace with a settings screen or modal
+        alert("Coming soon");
+      }
+
+      // Đồng hồ hiển thị giờ và phút
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        document.getElementById("clock").textContent = `${hours}:${minutes}`;
+      }
+
+      setInterval(updateClock, 1000); // cập nhật mỗi giây
+      updateClock(); // gọi lần đầu
+    </script>
+  </body>
+</html>

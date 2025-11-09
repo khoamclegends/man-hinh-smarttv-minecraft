@@ -1,0 +1,81 @@
+/* Loại bỏ mọi lề và đệm mặc định */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+/* Tạo một div chiếm toàn bộ màn hình */
+#tv-screen {
+  width: 100vw; /* 100% chiều rộng của khung nhìn */
+  height: 100vh; /* 100% chiều cao của khung nhìn */
+  background-color: #000000; /* Màu đen (bạn có thể đổi màu khác) */
+  color: white; /* Màu chữ (nếu bạn thêm chữ) */
+
+  /* Dùng flexbox để căn giữa nội dung (nếu có) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 2vw; /* Cỡ chữ thay đổi theo kích thước màn hình */
+}
+.app-tile {
+  background-color: #222;
+  border-radius: 1vw;
+  text-align: center;
+  padding: 1vw;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, background-color 0.3s;
+  cursor: pointer;
+}
+
+.app-tile:hover {
+  transform: scale(1.05); /* Phồng lên khi hover */
+  background-color: #333;
+}
+
+.app-tile:active {
+  transform: scale(0.95); /* Thu nhỏ khi click */
+}
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2vw;
+  padding: 2vw;
+  width: 80vw;
+}
+.small-tile {
+  transform: scale(1); /* Thu nhỏ toàn tile */
+}
+.yt-icon img {
+  width: 3vw;
+  height: 3vw;
+}
+#clock {
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
+  font-size: 2vw;
+  color: white;
+  font-family: "Arial", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5); /* nền mờ */
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+}
+.app-icon img {
+  width: 3vw;
+  height: 3vw;
+  object-fit: contain;
+  pointer-events: none;
+  margin-bottom: 0.5vw;
+}
